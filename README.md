@@ -1,4 +1,85 @@
 <p align="center">
+  <img src="doc/assets/header.png" alt="Paperclip — 运行你的 AI 公司" width="720" />
+</p>
+
+<p align="center">
+  <strong>🇨🇳 Paperclip 中文汉化版</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/paperclipai/paperclip"><img src="https://img.shields.io/badge/upstream-paperclipai%2Fpaperclip-blue" alt="Upstream" /></a>
+  <a href="https://github.com/CatMoxi/paperclip-zh-CN"><img src="https://img.shields.io/badge/lang-简体中文-red" alt="中文" /></a>
+  <a href="https://github.com/paperclipai/paperclip/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a>
+</p>
+
+---
+
+## 🇨🇳 中文说明
+
+本仓库是 [paperclipai/paperclip](https://github.com/paperclipai/paperclip) 的**简体中文汉化版**。
+
+### 什么是 Paperclip？
+
+**开源的"零人类公司"编排平台** — 如果说 Claude Code / Codex 是一个"员工"，那 Paperclip 就是整个"公司"。
+
+Paperclip 是一个 Node.js 服务器 + React UI，用来编排一支 AI 智能体团队来运营业务。你可以接入自己的 Agent，分配目标，从一个仪表盘追踪所有 Agent 的工作和成本。
+
+看起来像个任务管理器 — 但底层有**组织架构、预算控制、治理审批、目标对齐**和**智能体协调**。
+
+### 汉化范围
+
+| 项目 | 数量 |
+|------|------|
+| 翻译词条 | 299 个 |
+| 替换处 | 288 处 |
+| 修改文件 | 75 个 |
+
+覆盖：侧边栏导航、智能体管理、任务系统、审批/治理、成本/预算、设置页面、通用 UI 元素等。
+
+### 核心功能
+
+- 🤖 **多 Agent 编排** — 接入 Claude Code、Codex、OpenClaw、Cursor、Bash 等任何 Agent
+- 📊 **组织架构** — Agent 有职位、汇报关系、权限
+- 💰 **预算控制** — 按公司/项目/Agent 追踪 Token 消耗，超支自动停
+- ✅ **治理审批** — 董事会审批流程，决策追踪，审计日志
+- ⏰ **定时任务** — Cron/Webhook/API 触发，自动创建任务并唤醒 Agent
+- 🔌 **插件系统** — 不用 fork 就能扩展功能
+- 🔐 **密钥管理** — 加密存储，运行时按需注入
+
+### 快速开始
+
+```bash
+git clone https://github.com/CatMoxi/paperclip-zh-CN.git
+cd paperclip-zh-CN
+pnpm install
+pnpm dev
+```
+
+打开 `http://localhost:5173` 即可使用。
+
+### 与上游同步
+
+```bash
+git remote add upstream https://github.com/paperclipai/paperclip.git
+git fetch upstream
+git merge upstream/master
+```
+
+### 参与翻译
+
+翻译文件位于：
+- `ui/src/locales/zh.json` — 中文翻译词条
+- `ui/src/locales/en.json` — 英文原文对照
+
+欢迎 PR 补充未翻译的内容！
+
+---
+
+> **以下是原版 README：**
+
+---
+
+<p align="center">
   <img src="doc/assets/header.png" alt="Paperclip — runs your business" width="720" />
 </p>
 
