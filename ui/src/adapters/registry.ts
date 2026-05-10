@@ -7,6 +7,7 @@ import { geminiLocalUIAdapter } from "./gemini-local";
 import { openCodeLocalUIAdapter } from "./opencode-local";
 import { piLocalUIAdapter } from "./pi-local";
 import { openClawGatewayUIAdapter } from "./openclaw-gateway";
+import { hermesGatewayUIAdapter } from "./hermes-gateway";
 import { hermesLocalUIAdapter } from "./hermes-local";
 import { processUIAdapter } from "./process";
 import { httpUIAdapter } from "./http";
@@ -54,6 +55,7 @@ function registerBuiltInUIAdapters() {
     claudeLocalUIAdapter,
     codexLocalUIAdapter,
     geminiLocalUIAdapter,
+    hermesGatewayUIAdapter,
     hermesLocalUIAdapter,
     openCodeLocalUIAdapter,
     piLocalUIAdapter,

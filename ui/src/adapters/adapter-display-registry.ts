@@ -98,6 +98,11 @@ const adapterDisplayMap: Record<string, AdapterDisplayInfo> = {
     description: "Local Cursor agent",
     icon: MousePointer2,
   },
+  hermes_gateway: {
+    label: "Hermes Gateway",
+    description: "远程 Hermes Agent 合作方（支持 QQ 通知）",
+    icon: HermesIcon,
+  },
   openclaw_gateway: {
     label: "OpenClaw Gateway",
     description: "Invoke OpenClaw via gateway protocol",
