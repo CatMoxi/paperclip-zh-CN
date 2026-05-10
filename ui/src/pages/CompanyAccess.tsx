@@ -342,8 +342,8 @@ export function CompanyAccess() {
         <div className="overflow-hidden rounded-xl border border-border">
           <div className="grid grid-cols-[minmax(0,1.5fr)_120px_120px_minmax(0,1.2fr)_180px] gap-3 border-b border-border px-4 py-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
             <div>User account</div>
-            <div>Role</div>
-            <div>Status</div>
+            <div>角色</div>
+            <div>状态</div>
             <div>Grants</div>
             <div className="text-right">Action</div>
           </div>
@@ -437,8 +437,8 @@ export function CompanyAccess() {
                       setDraftStatus(event.target.value as EditableMemberStatus)
                     }
                   >
-                    <option value="active">Active</option>
-                    <option value="pending">Pending</option>
+                    <option value="active">活跃</option>
+                    <option value="pending">待处理</option>
                     <option value="suspended">Suspended</option>
                   </select>
                 </label>
@@ -566,7 +566,7 @@ export function CompanyAccess() {
                       </optgroup>
                     ) : null}
                     {activeReassignmentAgents.length > 0 ? (
-                      <optgroup label="Agents">
+                      <optgroup label="智能体">
                         {activeReassignmentAgents.map((agent) => (
                           <option key={agent.id} value={`agent:${agent.id}`}>
                             {agent.name} ({agent.role})

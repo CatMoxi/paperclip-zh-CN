@@ -181,7 +181,7 @@ export function SecretBindingPicker({
               onChange({ ...value, version: next });
             }}
             disabled={disabled || !value || !selectedSecret}
-            aria-label="Version"
+            aria-label="版本"
           >
             <option value={VERSION_LATEST}>latest</option>
             {selectedSecret
@@ -230,7 +230,7 @@ export function SecretBindingPicker({
           </DialogHeader>
           <div className="space-y-3">
             <div>
-              <label className="text-xs font-medium text-foreground/80" htmlFor="secret-name">Name</label>
+              <label className="text-xs font-medium text-foreground/80" htmlFor="secret-name">名称</label>
               <Input
                 id="secret-name"
                 value={createName}
@@ -254,7 +254,7 @@ export function SecretBindingPicker({
               </p>
             </div>
             <div>
-              <label className="text-xs font-medium text-foreground/80" htmlFor="secret-description">Description</label>
+              <label className="text-xs font-medium text-foreground/80" htmlFor="secret-description">描述</label>
               <Input
                 id="secret-description"
                 value={createDescription}
@@ -265,7 +265,7 @@ export function SecretBindingPicker({
             {createError ? <p className="text-xs text-destructive">{createError}</p> : null}
           </div>
           <DialogFooter>
-            <Button type="button" variant="outline" onClick={() => setCreateOpen(false)}>Cancel</Button>
+            <Button type="button" variant="outline" onClick={() => setCreateOpen(false)}>取消</Button>
             <Button
               type="button"
               onClick={() => createMutation.mutate()}

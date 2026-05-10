@@ -121,7 +121,7 @@ export function Workspaces() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold">Workspaces</h2>
+        <h2 className="text-xl font-bold">工作空间</h2>
       </div>
 
       {groups.length === 0 ? (

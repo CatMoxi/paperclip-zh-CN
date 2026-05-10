@@ -177,7 +177,7 @@ export function ExecutionWorkspaceCloseDialog({
                 <div className="rounded-xl border border-border bg-background px-4 py-3 text-sm">
                   <div className="grid gap-2 sm:grid-cols-2">
                     <div>
-                      <div className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Branch</div>
+                      <div className="text-xs uppercase tracking-[0.16em] text-muted-foreground">分支</div>
                       <div className="font-mono text-xs">{readiness.git.branchName ?? "Unknown"}</div>
                     </div>
                     <div>

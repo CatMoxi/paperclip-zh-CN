@@ -63,7 +63,7 @@ export function BudgetPolicyCard({
         </div>
       </div>
       <div>
-        <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Budget</div>
+        <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">预算</div>
         <div className="mt-2 text-xl font-semibold tabular-nums">
           {summary.amount > 0 ? formatCents(summary.amount) : "Disabled"}
         </div>
@@ -82,7 +82,7 @@ export function BudgetPolicyCard({
         </div>
       </div>
       <div className="rounded-xl border border-border/70 bg-black/[0.18] px-4 py-3">
-        <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Budget</div>
+        <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">预算</div>
         <div className="mt-2 text-xl font-semibold tabular-nums">
           {summary.amount > 0 ? formatCents(summary.amount) : "Disabled"}
         </div>
@@ -96,7 +96,7 @@ export function BudgetPolicyCard({
   const progressSection = (
     <div className="space-y-2">
       <div className="flex items-center justify-between text-xs text-muted-foreground">
-        <span>Remaining</span>
+        <span>剩余</span>
         <span>{summary.amount > 0 ? formatCents(summary.remainingAmount) : "Unlimited"}</span>
       </div>
       <div className={cn("h-2 overflow-hidden rounded-full", isPlain ? "bg-border/70" : "bg-muted/70")}>

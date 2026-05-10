@@ -208,7 +208,7 @@ export function SidebarAccountMenu({
                 onClick={closeNavigationChrome}
               />
               <MenuAction
-                label="Documentation"
+                label="文档"
                 description="Open Paperclip docs in a new tab."
                 icon={BookOpen}
                 href={DOCS_URL}

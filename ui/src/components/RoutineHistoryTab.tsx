@@ -794,7 +794,7 @@ function RoutineRevisionDiffModal({
             tone="red"
           />
           <RevisionPicker
-            label="New"
+            label="新建"
             value={rightId}
             onChange={setRightId}
             revisions={revisions}
@@ -916,7 +916,7 @@ function DiffTable({ rows }: { rows: DiffRow[] }) {
     <div className="rounded-md border border-border text-xs font-mono leading-6 overflow-hidden">
       <div className="grid grid-cols-[56px_56px_24px_minmax(0,1fr)] border-b border-border/60 bg-muted/30 px-3 py-2 text-[11px] uppercase tracking-wide text-muted-foreground">
         <span>Old</span>
-        <span>New</span>
+        <span>新建</span>
         <span />
         <span>Content</span>
       </div>

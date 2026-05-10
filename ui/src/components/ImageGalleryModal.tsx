@@ -84,7 +84,7 @@ export function ImageGalleryModal({
                 href={current.contentPath}
                 download={current.originalFilename ?? "image"}
                 className="text-white/50 hover:text-white transition-colors"
-                title="Download"
+                title="下载"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Download className="h-4.5 w-4.5" />
@@ -93,7 +93,7 @@ export function ImageGalleryModal({
                 type="button"
                 onClick={() => onOpenChange(false)}
                 className="text-white/50 hover:text-white transition-colors"
-                title="Close"
+                title="关闭"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -109,7 +109,7 @@ export function ImageGalleryModal({
                   type="button"
                   onClick={goPrev}
                   className="rounded-full bg-white/10 p-3 text-white/60 hover:text-white hover:bg-white/20 transition-colors"
-                  title="Previous"
+                  title="上一步"
                 >
                   <ChevronLeft className="h-7 w-7" />
                 </button>
@@ -134,7 +134,7 @@ export function ImageGalleryModal({
                   type="button"
                   onClick={goNext}
                   className="rounded-full bg-white/10 p-3 text-white/60 hover:text-white hover:bg-white/20 transition-colors"
-                  title="Next"
+                  title="下一步"
                 >
                   <ChevronRight className="h-7 w-7" />
                 </button>

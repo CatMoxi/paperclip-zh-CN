@@ -170,7 +170,7 @@ export function IssueFiltersPopover({
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             <div className="min-w-0 space-y-3">
               <div className="space-y-1">
-                <span className="text-xs text-muted-foreground">Status</span>
+                <span className="text-xs text-muted-foreground">状态</span>
                 <div className="space-y-0.5">
                   {issueStatusOrder.map((status) => (
                     <label key={status} className="flex cursor-pointer items-center gap-2 rounded-sm px-2 py-1 hover:bg-accent/50">
@@ -186,7 +186,7 @@ export function IssueFiltersPopover({
               </div>
 
               <div className="space-y-1">
-                <span className="text-xs text-muted-foreground">Priority</span>
+                <span className="text-xs text-muted-foreground">优先级</span>
                 <div className="space-y-0.5">
                   {issuePriorityOrder.map((priority) => (
                     <label key={priority} className="flex cursor-pointer items-center gap-2 rounded-sm px-2 py-1 hover:bg-accent/50">
@@ -204,7 +204,7 @@ export function IssueFiltersPopover({
 
             <div className="min-w-0 space-y-3">
               <div className="space-y-1">
-                <span className="text-xs text-muted-foreground">Assignee</span>
+                <span className="text-xs text-muted-foreground">负责人</span>
                 <div className="max-h-32 space-y-0.5 overflow-y-auto">
                   <label className="flex cursor-pointer items-center gap-2 rounded-sm px-2 py-1 hover:bg-accent/50">
                     <Checkbox
@@ -291,7 +291,7 @@ export function IssueFiltersPopover({
 
               {projects && projects.length > 0 ? (
                 <div className="space-y-1">
-                  <span className="text-xs text-muted-foreground">Project</span>
+                  <span className="text-xs text-muted-foreground">项目</span>
                   <div className="max-h-32 space-y-0.5 overflow-y-auto">
                     {projects.map((project) => (
                       <label key={project.id} className="flex cursor-pointer items-center gap-2 rounded-sm px-2 py-1 hover:bg-accent/50">
@@ -310,7 +310,7 @@ export function IssueFiltersPopover({
             <div className="min-w-0 space-y-3">
               {labels && labels.length > 0 ? (
                 <div className="space-y-1">
-                  <span className="text-xs text-muted-foreground">Labels</span>
+                  <span className="text-xs text-muted-foreground">标签</span>
                   <div className="max-h-32 space-y-0.5 overflow-y-auto">
                     {labels.map((label) => (
                       <label key={label.id} className="flex cursor-pointer items-center gap-2 rounded-sm px-2 py-1 hover:bg-accent/50">
@@ -328,7 +328,7 @@ export function IssueFiltersPopover({
 
               {workspaces && workspaces.length > 0 ? (
                 <div className="space-y-1">
-                  <span className="text-xs text-muted-foreground">Workspace</span>
+                  <span className="text-xs text-muted-foreground">工作空间</span>
                   <div className="max-h-32 space-y-0.5 overflow-y-auto">
                     {workspaces.map((workspace) => (
                       <label key={workspace.id} className="flex cursor-pointer items-center gap-2 rounded-sm px-2 py-1 hover:bg-accent/50">

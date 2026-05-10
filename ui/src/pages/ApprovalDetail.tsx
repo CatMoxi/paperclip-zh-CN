@@ -350,7 +350,7 @@ export function ApprovalDetail() {
         <Textarea
           value={commentBody}
           onChange={(e) => setCommentBody(e.target.value)}
-          placeholder="Add a comment..."
+          placeholder="添加评论..."
           rows={3}
         />
         <div className="flex justify-end">

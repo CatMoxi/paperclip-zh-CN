@@ -258,7 +258,7 @@ export function CompanySettings() {
             />
           </Field>
           <Field
-            label="Description"
+            label="描述"
             hint="Optional description shown in the company profile."
           >
             <input

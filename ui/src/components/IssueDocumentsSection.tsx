@@ -695,7 +695,7 @@ export function IssueDocumentsSection({
           <Button variant="outline" size="sm" onClick={beginNewDocument} className="shrink-0">
             <Plus className="mr-1.5 h-3.5 w-3.5" />
             <span className="hidden sm:inline">New document</span>
-            <span className="sm:hidden">New</span>
+            <span className="sm:hidden">新建</span>
           </Button>
         </div>
       ) : (
@@ -706,7 +706,7 @@ export function IssueDocumentsSection({
             <Button variant="outline" size="sm" onClick={beginNewDocument} className="shrink-0">
               <Plus className="mr-1.5 h-3.5 w-3.5" />
               <span className="hidden sm:inline">New document</span>
-              <span className="sm:hidden">New</span>
+              <span className="sm:hidden">新建</span>
             </Button>
           </div>
         </div>

@@ -154,7 +154,7 @@ function SupportMark({ supported }: { supported: boolean }) {
       Yes
     </span>
   ) : (
-    <span className="text-muted-foreground">No</span>
+    <span className="text-muted-foreground">否</span>
   );
 }
 
@@ -447,7 +447,7 @@ export function CompanyEnvironments() {
             <caption className="sr-only">Environment support by adapter</caption>
             <thead className="border-b border-border text-muted-foreground">
               <tr>
-                <th className="py-2 pr-3 font-medium">Adapter</th>
+                <th className="py-2 pr-3 font-medium">适配器</th>
                 <th className="px-3 py-2 font-medium">Local</th>
                 <th className="px-3 py-2 font-medium">SSH</th>
                 {sandboxSupportVisible ? (
@@ -573,7 +573,7 @@ export function CompanyEnvironments() {
             {editingEnvironmentId ? "Edit environment" : "Add environment"}
           </div>
           <div className="space-y-3">
-            <Field label="Name" hint="Operator-facing name for this execution target.">
+            <Field label="名称" hint="Operator-facing name for this execution target.">
               <input
                 className="w-full rounded-md border border-border bg-transparent px-2.5 py-1.5 text-sm outline-none"
                 type="text"
@@ -581,7 +581,7 @@ export function CompanyEnvironments() {
                 onChange={(e) => setEnvironmentForm((current) => ({ ...current, name: e.target.value }))}
               />
             </Field>
-            <Field label="Description" hint="Optional note about what this machine is for.">
+            <Field label="描述" hint="Optional note about what this machine is for.">
               <input
                 className="w-full rounded-md border border-border bg-transparent px-2.5 py-1.5 text-sm outline-none"
                 type="text"
@@ -710,7 +710,7 @@ export function CompanyEnvironments() {
 
             {environmentForm.driver === "sandbox" ? (
               <div className="grid gap-3 md:grid-cols-2">
-                <Field label="Provider" hint="Installed run-capable sandbox provider plugins appear here.">
+                <Field label="提供商" hint="Installed run-capable sandbox provider plugins appear here.">
                   <select
                     className="w-full rounded-md border border-border bg-transparent px-2.5 py-1.5 text-sm outline-none"
                     value={environmentForm.sandboxProvider}

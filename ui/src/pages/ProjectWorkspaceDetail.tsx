@@ -593,7 +593,7 @@ export function ProjectWorkspaceDetail() {
               <h2 className="text-lg font-semibold">Current state</h2>
             </div>
             <Separator className="my-4" />
-            <DetailRow label="Project">
+            <DetailRow label="项目">
               <Link to={`/projects/${canonicalProjectRef}`} className="hover:underline">{project.name}</Link>
             </DetailRow>
             <DetailRow label="Workspace ID">
@@ -613,7 +613,7 @@ export function ProjectWorkspaceDetail() {
               ) : "None"}
             </DetailRow>
             <DetailRow label="Default ref">{workspace.defaultRef ?? "None"}</DetailRow>
-            <DetailRow label="Updated">{new Date(workspace.updatedAt).toLocaleString()}</DetailRow>
+            <DetailRow label="更新时间">{new Date(workspace.updatedAt).toLocaleString()}</DetailRow>
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-5">

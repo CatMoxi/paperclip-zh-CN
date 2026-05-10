@@ -2104,7 +2104,7 @@ export function Inbox() {
               <SelectItem value="everything">All categories</SelectItem>
               <SelectItem value="issues_i_touched">My recent issues</SelectItem>
               <SelectItem value="join_requests">Join requests</SelectItem>
-              <SelectItem value="approvals">Approvals</SelectItem>
+              <SelectItem value="approvals">审批</SelectItem>
               <SelectItem value="failed_runs">Failed runs</SelectItem>
               <SelectItem value="alerts">Alerts</SelectItem>
             </SelectContent>

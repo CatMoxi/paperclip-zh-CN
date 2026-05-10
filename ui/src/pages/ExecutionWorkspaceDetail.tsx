@@ -789,7 +789,7 @@ export function ExecutionWorkspaceDetail() {
 
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <div className="text-xs font-medium uppercase tracking-widest text-muted-foreground">General</div>
+                  <div className="text-xs font-medium uppercase tracking-widest text-muted-foreground">通用</div>
                   <Field label="Workspace name">
                     <Input
                       value={form.name}
@@ -992,7 +992,7 @@ export function ExecutionWorkspaceDetail() {
                 <CardDescription>Linked objects and relationships</CardDescription>
               </CardHeader>
               <CardContent>
-              <DetailRow label="Project">
+              <DetailRow label="项目">
                 {project ? <Link to={`/projects/${projectRef}`} className="hover:underline">{project.name}</Link> : <MonoValue value={workspace.projectId} />}
               </DetailRow>
               <DetailRow label="Project workspace">
@@ -1064,7 +1064,7 @@ export function ExecutionWorkspaceDetail() {
               <DetailRow label="Base ref">
                 {workspace.baseRef ? <MonoValue value={workspace.baseRef} copy /> : "None"}
               </DetailRow>
-              <DetailRow label="Branch">
+              <DetailRow label="分支">
                 {workspace.branchName ? <MonoValue value={workspace.branchName} copy /> : "None"}
               </DetailRow>
               <DetailRow label="Opened">{formatDateTime(workspace.openedAt)}</DetailRow>

@@ -216,7 +216,7 @@ function ReinstallDialog({
             <span className="font-mono">{adapter?.packageName}</span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">Current</span>
+            <span className="text-muted-foreground">当前值</span>
             <span className="font-mono">
               {adapter?.version ? `v${adapter.version}` : "unknown"}
             </span>
@@ -492,7 +492,7 @@ export function AdapterManager() {
               )}
             </div>
             <DialogFooter>
-              <Button variant="outline" onClick={() => setInstallDialogOpen(false)}>Cancel</Button>
+              <Button variant="outline" onClick={() => setInstallDialogOpen(false)}>取消</Button>
               <Button
                 onClick={() =>
                   installMutation.mutate({
@@ -647,7 +647,7 @@ export function AdapterManager() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setRemoveType(null)}>Cancel</Button>
+            <Button variant="outline" onClick={() => setRemoveType(null)}>取消</Button>
             <Button
               variant="destructive"
               disabled={removeMutation.isPending}

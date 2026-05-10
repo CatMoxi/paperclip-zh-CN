@@ -207,7 +207,7 @@ function InviteSummaryPanel({
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <MetaCard label="Company" value="Acme Robotics" />
+        <MetaCard label="公司" value="Acme Robotics" />
         <MetaCard label="Invited by" value="Board User" />
         <MetaCard label="Requested access" value={requestedAccess} />
         <MetaCard label="Invite expires" value="Mar 7, 2027" />
@@ -288,7 +288,7 @@ function InlineAuthPreview({
       <form className="space-y-4">
         {mode === "sign_up" ? (
           <label className="block text-sm">
-            <span className="mb-1 block text-zinc-400">Name</span>
+            <span className="mb-1 block text-zinc-400">名称</span>
             <input name="name" className={fieldClassName} defaultValue="Jane Example" readOnly />
           </label>
         ) : null}
@@ -470,7 +470,7 @@ function AuthScreenPreview({ mode, error }: { mode: "sign_in" | "sign_up"; error
             <div className="mt-6 space-y-4">
               {mode === "sign_up" ? (
                 <label className="block">
-                  <span className="mb-1 block text-xs text-muted-foreground">Name</span>
+                  <span className="mb-1 block text-xs text-muted-foreground">名称</span>
                   <input
                     className="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm"
                     defaultValue="Jane Example"
@@ -629,9 +629,9 @@ function CompanyInvitesPreview() {
               <thead>
                 <tr className="border-b border-border">
                   <th className="px-5 py-3 font-medium text-muted-foreground">State</th>
-                  <th className="px-5 py-3 font-medium text-muted-foreground">Role</th>
+                  <th className="px-5 py-3 font-medium text-muted-foreground">角色</th>
                   <th className="px-5 py-3 font-medium text-muted-foreground">Invited by</th>
-                  <th className="px-5 py-3 font-medium text-muted-foreground">Created</th>
+                  <th className="px-5 py-3 font-medium text-muted-foreground">创建时间</th>
                   <th className="px-5 py-3 font-medium text-muted-foreground">Join request</th>
                   <th className="px-5 py-3 text-right font-medium text-muted-foreground">Action</th>
                 </tr>
@@ -665,7 +665,7 @@ function CompanyInvitesPreview() {
                           Revoke
                         </Button>
                       ) : (
-                        <span className="text-xs text-muted-foreground">Inactive</span>
+                        <span className="text-xs text-muted-foreground">未激活</span>
                       )}
                     </td>
                   </tr>

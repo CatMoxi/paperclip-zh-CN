@@ -1355,13 +1355,13 @@ function ResultStep({ result, draftList }: ResultStepProps) {
       </div>
       <div className="min-h-0 flex-1 overflow-y-auto">
         {grouped.created.length > 0 && (
-          <ResultGroup label="Created" rows={grouped.created} draftLookup={draftLookup} />
+          <ResultGroup label="创建时间" rows={grouped.created} draftLookup={draftLookup} />
         )}
         {grouped.skipped.length > 0 && (
           <ResultGroup label="Skipped" rows={grouped.skipped} draftLookup={draftLookup} />
         )}
         {grouped.failed.length > 0 && (
-          <ResultGroup label="Failed" rows={grouped.failed} draftLookup={draftLookup} />
+          <ResultGroup label="失败" rows={grouped.failed} draftLookup={draftLookup} />
         )}
       </div>
     </div>

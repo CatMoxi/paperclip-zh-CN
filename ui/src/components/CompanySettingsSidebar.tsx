@@ -53,22 +53,22 @@ export function CompanySettingsSidebar() {
 
       <nav className="flex-1 min-h-0 overflow-y-auto scrollbar-auto-hide px-3 py-2">
         <div className="flex flex-col gap-0.5">
-          <SidebarNavItem to="/company/settings" label="General" icon={SlidersHorizontal} end />
+          <SidebarNavItem to="/company/settings" label="通用" icon={SlidersHorizontal} end />
           <SidebarNavItem
             to="/company/settings/environments"
-            label="Environments"
+            label="环境"
             icon={MonitorCog}
             end
           />
           <SidebarNavItem
             to="/company/settings/access"
-            label="Access"
+            label="访问控制"
             icon={Shield}
             badge={badges?.joinRequests ?? 0}
             end
           />
-          <SidebarNavItem to="/company/settings/invites" label="Invites" icon={MailPlus} end />
-          <SidebarNavItem to="/company/settings/secrets" label="Secrets" icon={KeyRound} end />
+          <SidebarNavItem to="/company/settings/invites" label="邀请" icon={MailPlus} end />
+          <SidebarNavItem to="/company/settings/secrets" label="密钥管理" icon={KeyRound} end />
         </div>
       </nav>
     </aside>

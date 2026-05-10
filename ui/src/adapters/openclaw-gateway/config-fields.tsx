@@ -191,7 +191,7 @@ export function OpenClawGatewayConfigFields({
             placeholder="OpenClaw gateway token"
           />
 
-          <Field label="Role">
+          <Field label="角色">
             <DraftInput
               value={eff("adapterConfig", "role", String(config.role ?? "operator"))}
               onCommit={(v) => mark("adapterConfig", "role", v || undefined)}

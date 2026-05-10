@@ -345,7 +345,7 @@ export function SidebarAgents() {
 
   return (
     <SidebarSection
-      label="Agents"
+      label="智能体"
       collapsible={{ open, onOpenChange: setOpen }}
       headerAction={{
         ariaLabel: "New agent",

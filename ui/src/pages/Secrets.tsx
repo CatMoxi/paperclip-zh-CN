@@ -755,7 +755,7 @@ export function Secrets() {
     <div className="flex h-full min-h-0 flex-col gap-4">
       <div className="flex items-center gap-2">
         <KeyRound className="h-5 w-5 text-muted-foreground" />
-        <h1 className="text-lg font-semibold">Secrets</h1>
+        <h1 className="text-lg font-semibold">密钥管理</h1>
       </div>
 
       <Tabs
@@ -827,11 +827,11 @@ export function Secrets() {
               <table className="w-full text-sm">
               <thead className="bg-muted/40 text-xs uppercase tracking-wide text-muted-foreground">
                 <tr>
-                  <th className="px-3 py-2 text-left font-medium">Name</th>
+                  <th className="px-3 py-2 text-left font-medium">名称</th>
                   <th className="px-2 py-2 text-left font-medium">Mode</th>
-                  <th className="px-2 py-2 text-left font-medium">Provider</th>
-                  <th className="px-2 py-2 text-left font-medium">Status</th>
-                  <th className="px-2 py-2 text-left font-medium">Version</th>
+                  <th className="px-2 py-2 text-left font-medium">提供商</th>
+                  <th className="px-2 py-2 text-left font-medium">状态</th>
+                  <th className="px-2 py-2 text-left font-medium">版本</th>
                   <th className="px-2 py-2 text-left font-medium">Last rotated</th>
                   <th className="px-2 py-2 text-left font-medium">Last resolved</th>
                   <th className="px-2 py-2 text-left font-medium">References</th>
@@ -1103,7 +1103,7 @@ export function Secrets() {
           <div className="space-y-3">
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="text-xs font-medium" htmlFor="new-secret-name">Name</label>
+                <label className="text-xs font-medium" htmlFor="new-secret-name">名称</label>
                 <Input
                   id="new-secret-name"
                   value={createForm.name}
@@ -1129,7 +1129,7 @@ export function Secrets() {
               </div>
             </div>
             <div>
-              <label className="text-xs font-medium" htmlFor="new-secret-provider">Provider</label>
+              <label className="text-xs font-medium" htmlFor="new-secret-provider">提供商</label>
               <select
                 id="new-secret-provider"
                 className="h-9 w-full rounded-md border border-border bg-background px-2 text-sm outline-none"
@@ -1296,7 +1296,7 @@ export function Secrets() {
           <div className="space-y-4">
             <div className="grid gap-3 sm:grid-cols-2">
               <div>
-                <label className="text-xs font-medium" htmlFor="vault-provider">Provider</label>
+                <label className="text-xs font-medium" htmlFor="vault-provider">提供商</label>
                 <select
                   id="vault-provider"
                   className="h-9 w-full rounded-md border border-border bg-background px-2 text-sm outline-none disabled:opacity-60"
@@ -1326,7 +1326,7 @@ export function Secrets() {
                 />
               </div>
               <div>
-                <label className="text-xs font-medium" htmlFor="vault-status">Status</label>
+                <label className="text-xs font-medium" htmlFor="vault-status">状态</label>
                 <select
                   id="vault-status"
                   className="h-9 w-full rounded-md border border-border bg-background px-2 text-sm outline-none"
@@ -1348,7 +1348,7 @@ export function Secrets() {
                     Warning
                   </option>
                   <option value="coming_soon">Coming soon</option>
-                  <option value="disabled">Disabled</option>
+                  <option value="disabled">已禁用</option>
                 </select>
               </div>
               <label className="flex items-center gap-2 pt-6 text-sm">
@@ -1498,7 +1498,7 @@ export function Secrets() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setDeleteConfirm(null)}>Cancel</Button>
+            <Button variant="outline" onClick={() => setDeleteConfirm(null)}>取消</Button>
             <Button
               variant="destructive"
               onClick={() => deleteConfirm && deleteMutation.mutate(deleteConfirm.id)}
@@ -1599,7 +1599,7 @@ function SecretsFiltersPopover({
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="space-y-1">
-              <span className="text-xs text-muted-foreground">Status</span>
+              <span className="text-xs text-muted-foreground">状态</span>
               <div className="space-y-0.5">
                 {statusOptions.map((option) => (
                   <label key={option.value} className="flex cursor-pointer items-center gap-2 rounded-sm px-2 py-1 hover:bg-accent/50">
@@ -1614,7 +1614,7 @@ function SecretsFiltersPopover({
             </div>
 
             <div className="space-y-1">
-              <span className="text-xs text-muted-foreground">Provider</span>
+              <span className="text-xs text-muted-foreground">提供商</span>
               <div className="max-h-48 space-y-0.5 overflow-y-auto pr-1">
                 <label className="flex cursor-pointer items-center gap-2 rounded-sm px-2 py-1 hover:bg-accent/50">
                   <Checkbox
@@ -2036,15 +2036,15 @@ function SecretDetailsTab({
 }) {
   return (
     <dl className="grid grid-cols-2 gap-x-4 gap-y-3 text-xs">
-      <DetailRow label="Description">
+      <DetailRow label="描述">
         <span>{secret.description ?? <span className="text-muted-foreground">—</span>}</span>
       </DetailRow>
       <DetailRow label="Custody">{modeLabel(secret.managedMode)}</DetailRow>
-      <DetailRow label="Provider">{secret.provider.replaceAll("_", " ")}</DetailRow>
+      <DetailRow label="提供商">{secret.provider.replaceAll("_", " ")}</DetailRow>
       <DetailRow label="Provider vault">{providerVaultLabel(providerConfigs, secret.providerConfigId)}</DetailRow>
       <DetailRow label="Latest version">v{secret.latestVersion}</DetailRow>
-      <DetailRow label="Created">{formatRelative(secret.createdAt)}</DetailRow>
-      <DetailRow label="Updated">{formatRelative(secret.updatedAt)}</DetailRow>
+      <DetailRow label="创建时间">{formatRelative(secret.createdAt)}</DetailRow>
+      <DetailRow label="更新时间">{formatRelative(secret.updatedAt)}</DetailRow>
       <DetailRow label="Last rotated">{formatRelative(secret.lastRotatedAt)}</DetailRow>
       <DetailRow label="Last resolved">{formatRelative(secret.lastResolvedAt)}</DetailRow>
       {secret.externalRef ? (

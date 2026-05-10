@@ -3081,7 +3081,7 @@ export function IssueDetail() {
         {uploadAttachment.isPending || importMarkdownDocument.isPending ? "Uploading..." : (
           <>
             <span className="hidden sm:inline">Upload attachment</span>
-            <span className="sm:hidden">Upload</span>
+            <span className="sm:hidden">上传</span>
           </>
         )}
       </Button>
@@ -3629,7 +3629,7 @@ export function IssueDetail() {
         onDrop={(evt) => void handleAttachmentDrop(evt)}
       >
         <div className="flex items-center justify-between gap-2">
-          <h3 className="text-sm font-medium text-muted-foreground">Attachments</h3>
+          <h3 className="text-sm font-medium text-muted-foreground">附件</h3>
           {attachmentUploadButton}
         </div>
 

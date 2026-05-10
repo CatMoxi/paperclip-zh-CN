@@ -334,7 +334,7 @@ export function SystemNoticeUxLab() {
             <SystemNotice {...dangerCollapsed} />
             <p className="px-1 text-xs text-muted-foreground">
               Same content. The visible body is one short system sentence; reviewers expand{" "}
-              <span className="font-medium text-foreground">Details</span> only when they need run
+              <span className="font-medium text-foreground">详情</span> only when they need run
               evidence. Tone is reinforced by the octagon icon and the &quot;System alert&quot; label,
               not just red.
             </p>

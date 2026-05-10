@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   Inbox,
   CircleDot,
@@ -80,10 +81,10 @@ export function Sidebar() {
             <SquarePen className="h-4 w-4 shrink-0" />
             <span className="truncate">New Issue</span>
           </button>
-          <SidebarNavItem to="/dashboard" label="Dashboard" icon={LayoutDashboard} liveCount={liveRunCount} />
+          <SidebarNavItem to="/dashboard" label="仪表盘" icon={LayoutDashboard} liveCount={liveRunCount} />
           <SidebarNavItem
             to="/inbox"
-            label="Inbox"
+            label="收件箱"
             icon={Inbox}
             badge={inboxBadge.inbox}
             badgeTone={inboxBadge.failedRuns > 0 ? "danger" : "default"}
@@ -99,11 +100,11 @@ export function Sidebar() {
         </div>
 
         <SidebarSection label="Work">
-          <SidebarNavItem to="/issues" label="Issues" icon={CircleDot} />
-          <SidebarNavItem to="/routines" label="Routines" icon={Repeat} />
-          <SidebarNavItem to="/goals" label="Goals" icon={Target} />
+          <SidebarNavItem to="/issues" label="任务" icon={CircleDot} />
+          <SidebarNavItem to="/routines" label="定时任务" icon={Repeat} />
+          <SidebarNavItem to="/goals" label="目标" icon={Target} />
           {showWorkspacesLink ? (
-            <SidebarNavItem to="/workspaces" label="Workspaces" icon={GitBranch} />
+            <SidebarNavItem to="/workspaces" label="工作空间" icon={GitBranch} />
           ) : null}
         </SidebarSection>
 
@@ -111,12 +112,12 @@ export function Sidebar() {
 
         <SidebarAgents />
 
-        <SidebarSection label="Company">
+        <SidebarSection label="公司">
           <SidebarNavItem to="/org" label="Org" icon={Network} />
-          <SidebarNavItem to="/skills" label="Skills" icon={Boxes} />
-          <SidebarNavItem to="/costs" label="Costs" icon={DollarSign} />
-          <SidebarNavItem to="/activity" label="Activity" icon={History} />
-          <SidebarNavItem to="/company/settings" label="Settings" icon={Settings} />
+          <SidebarNavItem to="/skills" label="技能" icon={Boxes} />
+          <SidebarNavItem to="/costs" label="成本" icon={DollarSign} />
+          <SidebarNavItem to="/activity" label="动态" icon={History} />
+          <SidebarNavItem to="/company/settings" label="设置" icon={Settings} />
         </SidebarSection>
 
         <PluginSlotOutlet

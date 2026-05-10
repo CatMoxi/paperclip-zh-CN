@@ -224,7 +224,7 @@ export function EnvVarEditor({
                     updateRow(index, { version: raw === "latest" ? "latest" : Number.parseInt(raw, 10) });
                   }}
                   disabled={!row.secretId}
-                  aria-label="Version"
+                  aria-label="版本"
                 >
                   <option value="latest">latest</option>
                   {(() => {

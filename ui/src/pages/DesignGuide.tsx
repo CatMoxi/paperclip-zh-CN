@@ -369,7 +369,7 @@ export function DesignGuide() {
 
         <SubSection title="States">
           <div className="flex items-center gap-2 flex-wrap">
-            <Button disabled>Disabled</Button>
+            <Button disabled>已禁用</Button>
             <Button variant="outline" disabled>Disabled Outline</Button>
           </div>
         </SubSection>
@@ -554,7 +554,7 @@ export function DesignGuide() {
       {/* ============================================================ */}
       {/*  SELECT                                                       */}
       {/* ============================================================ */}
-      <Section title="Select">
+      <Section title="选择">
         <div className="grid gap-6 md:grid-cols-2">
           <SubSection title="Default size">
             <Select value={selectValue} onValueChange={setSelectValue}>
@@ -562,11 +562,11 @@ export function DesignGuide() {
                 <SelectValue placeholder="Select status" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="backlog">Backlog</SelectItem>
-                <SelectItem value="todo">Todo</SelectItem>
+                <SelectItem value="backlog">积压</SelectItem>
+                <SelectItem value="todo">待办</SelectItem>
                 <SelectItem value="in_progress">In Progress</SelectItem>
                 <SelectItem value="in_review">In Review</SelectItem>
-                <SelectItem value="done">Done</SelectItem>
+                <SelectItem value="done">完成</SelectItem>
               </SelectContent>
             </Select>
             <p className="text-xs text-muted-foreground">Current value: {selectValue}</p>
@@ -577,10 +577,10 @@ export function DesignGuide() {
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="critical">Critical</SelectItem>
-                <SelectItem value="high">High</SelectItem>
-                <SelectItem value="medium">Medium</SelectItem>
-                <SelectItem value="low">Low</SelectItem>
+                <SelectItem value="critical">紧急</SelectItem>
+                <SelectItem value="high">高</SelectItem>
+                <SelectItem value="medium">中</SelectItem>
+                <SelectItem value="low">低</SelectItem>
               </SelectContent>
             </Select>
           </SubSection>
@@ -653,7 +653,7 @@ export function DesignGuide() {
           </CollapsibleTrigger>
           <CollapsibleContent className="rounded-md border border-border p-3">
             <div className="space-y-2">
-              <Label htmlFor="owner-filter">Owner</Label>
+              <Label htmlFor="owner-filter">所有者</Label>
               <Input id="owner-filter" placeholder="Filter by agent name" />
             </div>
           </CollapsibleContent>
@@ -675,17 +675,17 @@ export function DesignGuide() {
             </SheetHeader>
             <div className="space-y-4 px-4">
               <div className="space-y-1">
-                <Label htmlFor="sheet-title">Title</Label>
+                <Label htmlFor="sheet-title">标题</Label>
                 <Input id="sheet-title" defaultValue="Improve onboarding docs" />
               </div>
               <div className="space-y-1">
-                <Label htmlFor="sheet-description">Description</Label>
+                <Label htmlFor="sheet-description">描述</Label>
                 <Textarea id="sheet-description" defaultValue="Capture setup pitfalls and screenshots." />
               </div>
             </div>
             <SheetFooter>
-              <Button variant="outline">Cancel</Button>
-              <Button>Save</Button>
+              <Button variant="outline">取消</Button>
+              <Button>保存</Button>
             </SheetFooter>
           </SheetContent>
         </Sheet>
@@ -748,7 +748,7 @@ export function DesignGuide() {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="#">Projects</BreadcrumbLink>
+              <BreadcrumbLink href="#">项目</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -777,7 +777,7 @@ export function DesignGuide() {
             </CardContent>
             <CardFooter className="gap-2">
               <Button size="sm">Action</Button>
-              <Button variant="outline" size="sm">Cancel</Button>
+              <Button variant="outline" size="sm">取消</Button>
             </CardFooter>
           </Card>
         </SubSection>
@@ -786,7 +786,7 @@ export function DesignGuide() {
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
             <MetricCard icon={Bot} value={12} label="Active Agents" description="+3 this week" />
             <MetricCard icon={CircleDot} value={48} label="Open Issues" />
-            <MetricCard icon={DollarSign} value="$1,234" label="Monthly Cost" description="Under budget" />
+            <MetricCard icon={DollarSign} value="$1,234" label="月成本" description="Under budget" />
             <MetricCard icon={Zap} value="99.9%" label="Uptime" />
           </div>
         </SubSection>
@@ -799,10 +799,10 @@ export function DesignGuide() {
         <SubSection title="Default (pill) variant">
           <Tabs defaultValue="overview">
             <TabsList>
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="runs">Runs</TabsTrigger>
+              <TabsTrigger value="overview">概览</TabsTrigger>
+              <TabsTrigger value="runs">运行记录</TabsTrigger>
               <TabsTrigger value="config">Config</TabsTrigger>
-              <TabsTrigger value="costs">Costs</TabsTrigger>
+              <TabsTrigger value="costs">成本</TabsTrigger>
             </TabsList>
             <TabsContent value="overview">
               <p className="text-sm text-muted-foreground py-4">Overview tab content.</p>
@@ -822,9 +822,9 @@ export function DesignGuide() {
         <SubSection title="Line variant">
           <Tabs defaultValue="summary">
             <TabsList variant="line">
-              <TabsTrigger value="summary">Summary</TabsTrigger>
-              <TabsTrigger value="details">Details</TabsTrigger>
-              <TabsTrigger value="comments">Comments</TabsTrigger>
+              <TabsTrigger value="summary">摘要</TabsTrigger>
+              <TabsTrigger value="details">详情</TabsTrigger>
+              <TabsTrigger value="comments">评论</TabsTrigger>
             </TabsList>
             <TabsContent value="summary">
               <p className="text-sm text-muted-foreground py-4">Summary content with underline tabs.</p>
@@ -985,7 +985,7 @@ export function DesignGuide() {
             <TooltipTrigger asChild>
               <Button variant="ghost" size="icon-sm"><Settings /></Button>
             </TooltipTrigger>
-            <TooltipContent>Settings</TooltipContent>
+            <TooltipContent>设置</TooltipContent>
           </Tooltip>
         </div>
       </Section>
@@ -1007,17 +1007,17 @@ export function DesignGuide() {
             </DialogHeader>
             <div className="space-y-3">
               <div>
-                <Label>Name</Label>
+                <Label>名称</Label>
                 <Input placeholder="Enter a name" className="mt-1.5" />
               </div>
               <div>
-                <Label>Description</Label>
+                <Label>描述</Label>
                 <Textarea placeholder="Describe..." className="mt-1.5" />
               </div>
             </div>
             <DialogFooter>
-              <Button variant="outline">Cancel</Button>
-              <Button>Save</Button>
+              <Button variant="outline">取消</Button>
+              <Button>保存</Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
@@ -1091,22 +1091,22 @@ export function DesignGuide() {
       <Section title="Property Row Pattern">
         <div className="border border-border rounded-md p-4 space-y-1 max-w-sm">
           <div className="flex items-center justify-between py-1.5">
-            <span className="text-xs text-muted-foreground">Status</span>
+            <span className="text-xs text-muted-foreground">状态</span>
             <StatusBadge status="active" />
           </div>
           <div className="flex items-center justify-between py-1.5">
-            <span className="text-xs text-muted-foreground">Priority</span>
+            <span className="text-xs text-muted-foreground">优先级</span>
             <PriorityIcon priority="high" />
           </div>
           <div className="flex items-center justify-between py-1.5">
-            <span className="text-xs text-muted-foreground">Assignee</span>
+            <span className="text-xs text-muted-foreground">负责人</span>
             <div className="flex items-center gap-1.5">
               <Avatar size="sm"><AvatarFallback>A</AvatarFallback></Avatar>
               <span className="text-xs">Agent Alpha</span>
             </div>
           </div>
           <div className="flex items-center justify-between py-1.5">
-            <span className="text-xs text-muted-foreground">Created</span>
+            <span className="text-xs text-muted-foreground">创建时间</span>
             <span className="text-xs">Jan 15, 2025</span>
           </div>
         </div>
@@ -1190,7 +1190,7 @@ export function DesignGuide() {
           <div className="space-y-3">
             <div className="rounded-md border border-border p-3">
               <div className="flex items-center justify-between mb-1">
-                <span className="text-xs font-medium text-muted-foreground">Agent</span>
+                <span className="text-xs font-medium text-muted-foreground">智能体</span>
                 <span className="text-xs text-muted-foreground">Jan 15, 2025</span>
               </div>
               <p className="text-sm">Started working on the authentication module. Will need API keys configured.</p>
@@ -1205,7 +1205,7 @@ export function DesignGuide() {
           </div>
           <div className="space-y-2">
             <Textarea placeholder="Leave a comment..." rows={3} />
-            <Button size="sm">Comment</Button>
+            <Button size="sm">评论</Button>
           </div>
         </div>
       </Section>
@@ -1218,9 +1218,9 @@ export function DesignGuide() {
           <table className="w-full text-xs">
             <thead className="border-b border-border bg-accent/20">
               <tr>
-                <th className="text-left px-3 py-2 font-medium text-muted-foreground">Model</th>
-                <th className="text-left px-3 py-2 font-medium text-muted-foreground">Tokens</th>
-                <th className="text-left px-3 py-2 font-medium text-muted-foreground">Cost</th>
+                <th className="text-left px-3 py-2 font-medium text-muted-foreground">模型</th>
+                <th className="text-left px-3 py-2 font-medium text-muted-foreground">Token数</th>
+                <th className="text-left px-3 py-2 font-medium text-muted-foreground">成本</th>
               </tr>
             </thead>
             <tbody>
@@ -1235,7 +1235,7 @@ export function DesignGuide() {
                 <td className="px-3 py-2 font-mono">$1.25</td>
               </tr>
               <tr>
-                <td className="px-3 py-2 font-medium">Total</td>
+                <td className="px-3 py-2 font-medium">总计</td>
                 <td className="px-3 py-2 font-mono">1.7M</td>
                 <td className="px-3 py-2 font-mono font-medium">$19.25</td>
               </tr>

@@ -65,7 +65,7 @@ function SkillList({ values }: { values: unknown }) {
 
   return (
     <div className="flex items-start gap-2">
-      <span className="text-muted-foreground w-20 sm:w-24 shrink-0 text-xs pt-0.5">Skills</span>
+      <span className="text-muted-foreground w-20 sm:w-24 shrink-0 text-xs pt-0.5">技能</span>
       <div className="flex flex-wrap gap-1.5">
         {items.map((item) => (
           <span
@@ -84,11 +84,11 @@ export function HireAgentPayload({ payload }: { payload: Record<string, unknown>
   return (
     <div className="mt-3 space-y-1.5 text-sm">
       <div className="flex items-center gap-2">
-        <span className="text-muted-foreground w-20 sm:w-24 shrink-0 text-xs">Name</span>
+        <span className="text-muted-foreground w-20 sm:w-24 shrink-0 text-xs">名称</span>
         <span className="font-medium">{String(payload.name ?? "—")}</span>
       </div>
-      <PayloadField label="Role" value={payload.role} />
-      <PayloadField label="Title" value={payload.title} />
+      <PayloadField label="角色" value={payload.role} />
+      <PayloadField label="标题" value={payload.title} />
       <PayloadField label="Icon" value={payload.icon} />
       {!!payload.capabilities && (
         <div className="flex items-start gap-2">
@@ -98,7 +98,7 @@ export function HireAgentPayload({ payload }: { payload: Record<string, unknown>
       )}
       {!!payload.adapterType && (
         <div className="flex items-center gap-2">
-          <span className="text-muted-foreground w-20 sm:w-24 shrink-0 text-xs">Adapter</span>
+          <span className="text-muted-foreground w-20 sm:w-24 shrink-0 text-xs">适配器</span>
           <span className="font-mono text-xs bg-muted px-1.5 py-0.5 rounded">
             {String(payload.adapterType)}
           </span>
@@ -113,7 +113,7 @@ export function CeoStrategyPayload({ payload }: { payload: Record<string, unknow
   const plan = payload.plan ?? payload.description ?? payload.strategy ?? payload.text;
   return (
     <div className="mt-3 space-y-1.5 text-sm">
-      <PayloadField label="Title" value={payload.title} />
+      <PayloadField label="标题" value={payload.title} />
       {!!plan && (
         <div className="mt-2 rounded-md bg-muted/40 px-3 py-2 text-sm text-muted-foreground whitespace-pre-wrap font-mono text-xs max-h-48 overflow-y-auto">
           {String(plan)}
@@ -178,13 +178,13 @@ function BoardApprovalPayloadContent({ payload }: { payload: Record<string, unkn
     <div className="mt-4 space-y-3.5 text-sm">
       {title && (
         <div className="space-y-1">
-          <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground">Title</p>
+          <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground">标题</p>
           <p className="font-medium leading-6 text-foreground">{title}</p>
         </div>
       )}
       {summary && (
         <div className="space-y-1">
-          <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground">Summary</p>
+          <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground">摘要</p>
           <p className="leading-6 text-foreground/90">{summary}</p>
         </div>
       )}

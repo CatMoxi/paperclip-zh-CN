@@ -297,9 +297,9 @@ export function CompanyInvites() {
                 <thead>
                   <tr className="border-b border-border">
                     <th className="px-5 py-3 font-medium text-muted-foreground">State</th>
-                    <th className="px-5 py-3 font-medium text-muted-foreground">Role</th>
+                    <th className="px-5 py-3 font-medium text-muted-foreground">角色</th>
                     <th className="px-5 py-3 font-medium text-muted-foreground">Invited by</th>
-                    <th className="px-5 py-3 font-medium text-muted-foreground">Created</th>
+                    <th className="px-5 py-3 font-medium text-muted-foreground">创建时间</th>
                     <th className="px-5 py-3 font-medium text-muted-foreground">Join request</th>
                     <th className="px-5 py-3 text-right font-medium text-muted-foreground">Action</th>
                   </tr>
@@ -342,7 +342,7 @@ export function CompanyInvites() {
                             Revoke
                           </Button>
                         ) : (
-                          <span className="text-xs text-muted-foreground">Inactive</span>
+                          <span className="text-xs text-muted-foreground">未激活</span>
                         )}
                       </td>
                     </tr>
